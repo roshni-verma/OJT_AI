@@ -1,0 +1,41 @@
+Regression analysis- A regression analysis makes it possible to infer or predict a 
+variable on the basis of one or more other variables.
+
+Two goals in regression- 
+1. measurement of the influence of one or more variables on anothers variables.
+2.prediction of a variable by one or more other variables.
+
+Q. which are the type of regression?
+Linear Regression: This is used when the relationship between the independent variable(s) and the dependent
+ variable is linear. It's one of the simplest regression models and assumes a linear relationship between the 
+independent and dependent variables.
+
+Multiple Linear Regression: Similar to linear regression, but with multiple independent variables. It's 
+used when you have more than one predictor variable.
+
+Polynomial Regression: This is used when the relationship between the independent and dependent variables 
+is better represented by a polynomial equation rather than a straight line.
+
+Logistic Regression: Unlike linear regression, logistic regression is used when the dependent variable is
+ binary (two classes). It models the probability of a certain outcome.
+
+Ridge Regression and Lasso Regression: These are types of linear regression that include a regularization
+ term to prevent overfitting. Ridge regression uses L2 regularization, while Lasso regression uses L1
+ regularization.
+
+ElasticNet Regression: A combination of Ridge and Lasso regression, it includes both L1 and L2 
+regularization terms.
+
+Support Vector Regression (SVR): A type of regression that uses support vector machines to fit the data.
+ It's useful when the relationship between variables is nonlinear.
+
+Decision Tree Regression: It uses decision trees to fit the data. It's a non-parametric method and can 
+handle nonlinear relationships.
+
+Random Forest Regression: A collection of decision trees, where each tree gives a prediction, and the final
+ prediction is the average (in case of regression) of all the predictions from individual trees.
+
+Gradient Boosting Regression: It builds multiple decision trees iteratively, where each tree corrects the
+ errors of the previous one. It's a powerful technique for regression tasks.
+
+

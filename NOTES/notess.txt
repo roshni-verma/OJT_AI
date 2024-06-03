@@ -1,0 +1,170 @@
+ Create a Bus child class that inherits from the Vehicle class. The default fare charge of any vehicle is seating capacity * 100. If Vehicle is Bus instance, we need to add an extra 10% on full fare as a maintenance charge. So total fare for bus instance will become the final amount = total fare + 10% of the total fare.
+
+class Vehicle:
+    def __init__(self, seating_capacity):
+        # यह कंस्ट्रक्टर सीटिंग क्षमता सेट करता है
+        self.seating_capacity = seating_capacity
+
+    def fare(self):
+        # यह मेथड किराया गणना करता है: सीटिंग क्षमता * 100
+        return self.seating_capacity * 100
+
+
+class Bus(Vehicle):
+    def fare(self):
+        # पैरेंट क्लास के मेथड का उपयोग करके बेस किराया गणना करें
+        total_fare = super().fare()
+        # मेंटेनेंस चार्ज का 10% गणना करें
+        maintenance_charge = total_fare * 0.10
+        # मेंटेनेंस चार्ज को कुल किराए में जोड़ें
+        final_amount = total_fare + maintenance_charge
+        return final_amount
+
+
+# उदाहरण उपयोग:
+vehicle = Vehicle(50)
+print(f"वाहन किराया: {vehicle.fare()}")
+
+bus = Bus(50)
+print(f"बस किराया: {bus.fare()}")
+
+Create a class 'Shape' with a method 'area()'. Then create two subclasses, 'Rectangle' and 'Circle', which override the 'area()' method to calculate the area of their respective shapes.
+
+import math
+
+class Shape:
+    def area(self):
+        pass  # यह एक बेस क्लास है, इसलिए यहां कुछ नहीं करेंगे
+
+class Rectangle(Shape):
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def area(self):
+        # आयत का क्षेत्रफल = लंबाई * चौड़ाई
+        return self.length * self.width
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        # वृत्त का क्षेत्रफल = π * (त्रिज्या^2)
+        return math.pi * self.radius * self.radius
+
+# उदाहरण उपयोग:
+rectangle = Rectangle(5, 3)
+print(f"आयत का क्षेत्रफल: {rectangle.area()}")
+
+circle = Circle(4)
+print(f"वृत्त का क्षेत्रफल: {circle.area()}")
+
+Create a class 'ElectricCar' which inherits from the 'Car' class. Add an additional attribute 'battery_capacity' and a method to display the battery information.
+Complete the task in Python OOPs
+यहां नीचे दिए गए कोड में, हम Car क्लास को परिभाषित करते हैं और फिर ElectricCar क्लास को बनाते हैं जो Car क्लास से इनहेरिट करता है। ElectricCar क्लास में एक अतिरिक्त एट्रीब्यूट battery_capacity और एक मेथड display_battery_info है जो बैटरी की जानकारी दिखाता है।
+
+python
+Copy code
+class Car:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+
+    def display_info(self):
+        return f"{self.year} {self.make} {self.model}"
+
+class ElectricCar(Car):
+    def __init__(self, make, model, year, battery_capacity):
+        super().__init__(make, model, year)
+        self.battery_capacity = battery_capacity
+
+    def display_battery_info(self):
+        return f"Battery capacity: {self.battery_capacity} kWh"
+
+# उदाहरण उपयोग:
+my_car = Car("Toyota", "Corolla", 2020)
+print(my_car.display_info())
+
+my_electric_car = ElectricCar("Tesla", "Model S", 2021, 100)
+print(my_electric_car.display_info())
+print(my_electric_car.display_battery_info())
+व्याख्या:
+Car क्लास:
+
+Car क्लास में एक __init__ मेथड है जो make, model, और year एट्रीब्यूट्स को इनिशियलाइज करता है।
+display_info मेथड एक स्ट्रिंग रिटर्न करता है जिसमें कार की जानकारी होती है।
+ElectricCar क्लास:
+
+ElectricCar क्लास Car क्लास से इनहेरिट करता है।
+__init__ मेथड Car क्लास के __init__ मेथड को super() के माध्यम से कॉल करता है ताकि make, model, और year एट्रीब्यूट्स को इनिशियलाइज किया जा सके, और battery_capacity एट्रीब्यूट को भी इनिशियलाइज करता है।
+display_battery_info मेथड एक स्ट्रिंग रिटर्न करता है जिसमें बैटरी की क्षमता की जानकारी होती है।
+उदाहरण उपयोग:
+एक Car ऑब्जेक्ट Toyota, Corolla, और वर्ष 2020 के साथ बनाया गया है और उसकी जानकारी display_info मेथड के माध्यम से प्रिंट की गई है।
+एक ElectricCar ऑब्जेक्ट Tesla, Model S, वर्ष 2021, और बैटरी क्षमता 100 kWh के साथ बनाया गया है। कार की जानकारी और बैटरी की जानकारी display_info और display_battery_info मेथड्स के माध्यम से प्रिंट की गई है।
+
+
+
+
+
+
+
+# eda or pca(expolaroty data analysis)study krna hai.
+
+EDA -Exploratory Data Analysis (EDA) is a crucial step in the data analysis process where initial investigations on data are performed to discover patterns, spot anomalies, test hypotheses, and check assumptions with the help of summary statistics and graphical representations.
+
+Key Aspects of EDA
+Data Understanding:
+
+Descriptive Statistics: Calculate summary statistics such as mean, median, mode, range, and standard deviation to understand the central tendency and variability of the data.
+Data Types: Identify the types of variables (e.g., numerical, categorical) and understand their distributions.
+Data Cleaning:
+
+Missing Values: Identify and handle missing values through imputation or removal.
+Outliers: Detect and analyze outliers to understand if they are errors or significant insights.
+Duplicates: Identify and remove duplicate records.
+Visualization:
+
+Histograms: Used to visualize the distribution of a single numerical variable.
+Box Plots: Help in understanding the spread and identifying outliers.
+Scatter Plots: Useful for identifying relationships between two numerical variables.
+Bar Charts: Good for comparing categorical data.
+Heatmaps: Useful for visualizing correlations between variables.
+Hypothesis Testing:
+
+Formulate and test hypotheses based on initial findings. This helps in driving further analysis and modeling.
+EDA Tools and Techniques
+Python Libraries:
+Pandas: For data manipulation and analysis.
+NumPy: For numerical computations.
+Matplotlib: For basic plotting.
+Seaborn: For advanced visualization.
+Plotly: For interactive plots
+
+What is Principal Component Analysis (PCA)?
+PCA is a dimensionality reduction technique used in statistics and machine learning to transform high-dimensional data into a lower-dimensional representation, preserving the most important information.
+
+How does a PCA work?
+Principal components are linear combinations of the original features that PCA finds and uses to capture the most variance in the data. In order of the amount of variance they explain, these orthogonal components are arranged.
+
+ When should PCA be applied?
+Using PCA is advantageous when working with multicollinear or high-dimensional datasets. Feature extraction, noise reduction, and data preprocessing are prominent uses for it.
+
+4. How are principal components interpreted?
+New axes are represented in the feature space by each principal component. An indicator of a component’s significance in capturing data variability is its capacity to explain a larger variance.
+
+5. What is the significance of principal components?
+Principal components represent the directions in which the data varies the most. The first few components typically capture the majority of the data’s variance, allowing for a more concise representation.
+
+
+Steps for Performing Exploratory Data Analysis
+
+Step 1: Understand the Problem and the Data
+Step 2: Import and Inspect the Data
+Step 3: Handle Missing Data
+Step 4: Explore Data Characteristics
+Step 5: Perform Data Transformation
+Step 6: Visualize Data Relationships
+Step 7: Handling Outliers
+Step 8: Communicate Findings and Insights

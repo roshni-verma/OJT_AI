@@ -1,0 +1,42 @@
+AI encompasses various technologies and methodologies, each serving different purposes and applications. Here are some of the main types of AI technologies:
+
+Machine Learning (ML): A subset of AI that enables systems to learn from data and improve over time without being explicitly programmed. Machine learning algorithms include supervised learning, unsupervised learning, semi-supervised learning, and reinforcement learning.
+
+Deep Learning: A type of machine learning that uses artificial neural networks with many layers (deep neural networks) to learn complex patterns in large amounts of data. Deep learning has been particularly successful in areas such as computer vision, natural language processing, and speech recognition.
+
+Natural Language Processing (NLP): NLP is a branch of AI focused on the interaction between computers and humans through natural language. It involves tasks such as text analysis, sentiment analysis, language translation, language generation, and chatbots.
+
+Computer Vision: Computer vision enables machines to interpret and understand visual information from the real world, such as images and videos. It involves tasks such as object detection, image classification, image segmentation, and image generation.
+
+Robotics: Robotics combines AI with engineering to design, construct, operate, and use robots. AI technologies are used in robotics for perception, planning, control, and interaction with the environment.
+
+Expert Systems: Expert systems are AI systems that emulate the decision-making ability of a human expert in a specific domain. They use rules and knowledge representations to provide advice or make decisions in areas such as healthcare, finance, and engineering.
+
+Reinforcement Learning: Reinforcement learning is a type of machine learning where an agent learns to make decisions by interacting with an environment and receiving feedback in the form of rewards or penalties. It is commonly used in applications such as game playing, robotics, and autonomous vehicles.
+
+Generative Adversarial Networks (GANs): GANs are a class of deep learning models used for generating new data samples that are similar to a given dataset. They consist of two neural networks, a generator and a discriminator, trained in an adversarial manner.
+
+
+steps in data cleaning:- 1. identify anoalies(consdency data)
+
+2.dealing with missing data.(handling missong value
+3. data transformation (standarzi missing data)
+4.removing duplicate(idenfyng and removing data points)
+5.errors correction(fixing and removing error or )
+
+[*missing value identify by mean and median.]
+
+customer feedback missing rating or comments are missing?
+solution: df('rating.median,true')
+
+droping  row missing feedback the 
+df()
+subset=(feedback),inplace= true
+
+df('product')=df product
+
+
+how to remove duplicate data
+df.drop_duplicate
+
+how to error correction 
