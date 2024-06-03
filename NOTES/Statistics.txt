@@ -1,0 +1,436 @@
+                                                      Statistics 
+
+
+
+Q.What is Statistics?
+Ans - Statistics is defined as the study and manipulation of data As we have already discussed in the introduction statistics deals with the analysis of 
+numerical data. It is used to derive conclusions from data that is collected and analyzed.
+
+Examples of Statistics-
+Suppose there are 20 students in a class and you have to calculate what is the average height in the class of 20 students. So here the average or the mean 
+value is the statistics of the height obtained.
+
+Types of Statistics
+There are 2 types of statistics:
+
+1.Descriptive Statistics
+2.Inferential Statistics
+
+Descriptive Statistics:- Descriptive Statistics uses data that provides a description of the population either through numerical calculated graphs or tables. It provides a graphical summary of data.
+1.Measure of Central Tendency
+2.Measure of Variability
+1.Measure of Central Tendency:- is also known as summary statistics that are used to represent the center point or a particular value of a data set or sample set. In statistics, there are three common measures of central tendency that are:
+
+Mean
+Median
+Mode
+
+
+It is simply used for summarizing objects, etc. There are two categories in this as follows
+#Basics of Statistics
+The basics of statistics comprise of :
+
+Measure of Central tendency(Mean, Median, Mode)
+Measure of Dispersion(Variance and Standard Deviation)
+
+
+#Mean in Statistics:-
+Mean in Mathematics is the measure of central tendency and is mostly used in Statistics. Mean is the easiest of all the measures. Data is of two types,
+ Grouped data and ungrouped data. The method of finding the mean is also different depending on the type of data. Mean is generally the average of a given 
+set of numbers or data. It is one of the most important measures of the central tendency of distributed data.
+In statistics, the mean is the average of a data set. It is calculated by adding all the numbers in the data set and dividing by the number of values in the 
+set.
+
+Mean:- Mean is defined as the average of the given set of values and is used to measure of the central tendency.
+
+Mean is denoted as a bar on x or xˉ. Let’s say the dataset given is X = {x1, x2, x3, . . ., xn}
+
+The mean of this dataset is denoted as 𝑥ˉ and is given by:
+            𝑥ˉ= 𝑥1+𝑥2+𝑥3+…𝑥𝑛 /n   
+
+#There are many uses and examples of mean in real life.
+The average (mean) marks obtained by the students in a class.
+A cricketer’s average is also an example of a mean.
+The average salary package is also used for the marketing of the colleges and their placement cell.
+
+Mean Formula:-Mean = (Sum of observed values in data)/(Total number of observed values in data)
+
+Example: Calculate the mean of the first 10 natural numbers.
+
+Solution:
+
+First 10 natural numbers = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+
+Sum of first 10 natural numbers = (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10)
+
+Mean = Sum of 10 natural numbers/10
+
+⇒ Mean = (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10)/10
+
+⇒ Mean = 55/10
+
+⇒ Mean = 5.5
+
+
+#Case 1: If there are ‘n’ number of items in a list. The data is {x1, x2, x3, … xn}. The Mean is calculated using the formula:
+ 
+If there are ‘n’ number of items in a list. The data is {x1, x2, x3, … xn}. The Mean is calculated using the formula:
+
+                𝑥ˉ=𝑥1+𝑥2+𝑥3+…𝑥n    
+                xˉ=∑xi/n
+
+Case 2: Let’s assume there are n number of items in a set i.e., {x1, x2, x3, … xn}, and the frequency of each item is given as {f1, f2, f3, . . ., fn}.
+                         ˉ
+   xˉ= f1x1+f2x2+f3x3+ …fnXn/f1+f2+f3...fn
+​
+        xˉ  =  ∑fixi/∑fi
+
+Case 3: When items of the set are given in the form of a range, for example, 1-10, 10-20, etc. To find the mean first we need to calculate the class mark for each class interval and then, the mean is calculated using the given formula:
+ 
+                
+            xˉ  =  ∑fixi/∑fi
+
+Mean of Ungrouped Data:-
+
+
+
+
+What is Median?
+A Median is a middle value for sorted data. The sorting of the data can be done either in ascending order or descending order. A median divides the data into two equal halves. 
+
+Median Formula:-
+The formula for the median is:
+
+If the number of values (n value) in the data set is odd then the formula to calculate the median is:
+
+Median = [(n + 1)/2]th term
+
+If the number of values (n value) in the data set is even then the formula to calculate the median is:
+
+Median  = [(n/2)th term + {(n/2) + 1}th term] / 2
+
+Example: Find the median of given data set 30, 40, 10, 20, and 50.
+
+Solution:
+
+Median of the data 30, 40, 10, 20, 50 is,
+
+Step 1: Order the given data in ascending order as:
+
+10, 20, 30, 40, 50
+
+Step 2: Check n (number of terms of data set) is even or odd and find the median of the data with respective ‘n’ value.
+
+Step 3: Here, n = 5 (odd)
+
+Median = [(n + 1)/2]th term
+
+Median = [(5 + 1)/2]th term
+
+            = 30
+
+Median of Grouped Data
+The median of the grouped data median is calculated using the formula,
+Median = l + [(n/2 – cf) / f]×h
+
+where
+
+l is lower limit of median class
+n is number of observations
+f is frequency of median class
+h is class size
+cf is cumulative frequency of class preceding the median class.
+
+#What is Mode?
+A mode is the most frequent value or item of the data set.
+
+Formula:-Mode = Highest Frequency Term
+
+Example: Find the mode of the given data set 1, 2, 2, 2, 3, 3, 4, 5.
+
+Solution:
+
+Given set is {1, 2, 2, 2, 3, 3, 4, 5}
+
+As the above data set is arranged in ascending order.
+
+By observing the above data set we can say that,
+
+Mode = 2
+
+As, it has highest frequency (3)
+
+
+
+Mode of Grouped Data
+The mode of the grouped data is calculated using the formula:
+
+Mode = l + [(f1 + f0) / (2f1 – f0 – f2)] × h
+
+where,
+
+f1 is the frequency of the modal class,
+f0 is the frequency of the class preceding the modal class,
+f2 is the frequency of the class succeeding the modal class,
+h is the size of class intervals, and
+l is the lower limit of modal class.
+
+
+Relation between Mean Median Mode
+For any group of data, the relation between the three central tendencies mean, median, and mode .
+             Mode = 3 Median – 2 Mean
+
+
+​
+ 2.Measure of Variability:-The measure of Variability is also known as the measure of dispersion and is used to describe variability in a sample or population. In statistics, there are three common measures of variability as shown below:
+
+1. Range of Data
+It is a given measure of how to spread apart values in a sample set or data set.
+
+Range = Maximum value – Minimum value
+
+2. Variance
+In probability theory and statistics, variance measures a data set’s spread or dispersion. It is calculated by averaging the squared deviations from the mean. Variance is usually represented by the symbol σ2.
+
+S2= ∑ni=1 [(xi – ͞x)2 / n]
+
+n represents total data points
+͞x represents the mean of data points
+xi represents individual data points
+Variance measures variability. The more spread out the data, the greater the variance compared to the average.
+
+There are two types of variance:
+
+Population variance: Often represented as σ²
+Sample variance: Often represented as s².
+Note: The standard deviation is the square root of the variance.
+
+3.Dispersion
+It is the measure of the dispersion of a set of data from its mean.
+
+σ= √ (1/n) ∑ni=1 (xi – μ)2
+
+2.Inferential Statistics
+Inferential Statistics makes inferences and predictions about the population based on a sample of data taken from the population. It generalizes a large dataset and applies probabilities to draw a conclusion.
+
+Types of Inferential Statistics
+Various types of inferential statistics are used widely nowadays and are very easy to interpret. These are given below:
+
+One sample test of difference/One sample hypothesis test
+Confidence Interval
+Contingency Tables and Chi-Square Statistic
+T-test or Anova
+Pearson Correlation
+Bivariate Regression
+Multi-variate Regression
+
+##What is Supervised learning?
+Supervised learning is a type of machine learning algorithm that learns from labeled data. Labeled data is data that has been tagged with a correct answer 
+or classification.
+
+For example, a labeled dataset of images of Elephant, Camel and Cow would have each image tagged with either “Elephant” , “Camel”or “Cow.”
+
+Key Points:
+
+Supervised learning involves training a machine from labeled data.
+Labeled data consists of examples with the correct answer or classification.
+The machine learns the relationship between inputs (fruit images) and outputs (fruit labels).
+The trained machine can then make predictions on new, unlabeled data.
+
+Advantages of Supervised learning:-
+Supervised learning allows collecting data and produces data output from previous experiences.
+Helps to optimize performance criteria with the help of experience.
+Supervised machine learning helps to solve various types of real-world computation problems.
+It performs classification and regression tasks.
+It allows estimating or mapping the result to a new sample. 
+We have complete control over choosing the number of classes we want in the training data.
+
+Disadvantages of Supervised learning:-
+Classifying big data can be challenging.
+Training for supervised learning needs a lot of computation time. So, it requires a lot of time.
+Supervised learning cannot handle all complex tasks in Machine Learning.
+Computation time is vast for supervised learning.
+It requires a labelled data set.
+It requires a training process.
+
+
+Types of Supervised Learning
+Supervised learning is classified into two categories of algorithms: 
+
+Regression: A regression problem is when the output variable is a real value, such as “dollars” or “weight”.
+Classification: A classification problem is when the output variable is a category, such as “Red” or “blue” , “disease” or “no disease”.
+
+1- Regression
+Regression is a type of supervised learning that is used to predict continuous values, such as house prices, stock prices, or customer churn. Regression algorithms learn a function that maps from the input features to the output value.
+
+Some common regression algorithms include:
+
+Linear Regression
+Polynomial Regression
+Support Vector Machine Regression
+Decision Tree Regression
+Random Forest Regression
+2- Classification
+Classification is a type of supervised learning that is used to predict categorical values, such as whether a customer will churn or not, whether an email is spam or not, or whether a medical image shows a tumor or not. Classification algorithms learn a function that maps from the input features to a probability distribution over the output classes.
+
+Some common classification algorithms include:
+
+Logistic Regression
+Support Vector Machines
+Decision Trees
+Random Forests
+Naive Baye
+
+#supervised method equation problem and solution:- 
+Problem Statement
+We want to predict the price of a house based on its size (in square feet).
+
+Dataset
+House Size (sq ft)	Price ($)
+1400	                245,000
+1600	                312,000
+1700	                279,000
+1875	                308,000
+1100	                199,000
+1550	                219,000
+2350	                405,000
+2450	                324,000
+Goal
+Create a model that predicts the price of a house based on its size.
+
+Steps to Solve
+Define the Model:
+We'll use a simple linear regression model which assumes a straight-line relationship between house size and price. The model is represented by:
+
+Price=θ0+θ1 ×Size
+Where:
+​
+θ0  is the intercept (the starting point of the line).
+
+​
+ θ1 is the slope (how much the price changes with size).
+Prepare the Data:
+We take the house sizes as  X and the prices as Y.
+
+Implement the Model:
+We'll use Python and scikit-learn to perform linear regression and find θ0 and θ1.
+
+​
+ .
+
+Solution using Python
+Here's a simple implementation using Python:
+
+
+import numpy as np
+from sklearn.linear_model import LinearRegression
+
+# Data
+X = np.array([1400, 1600, 1700, 1875, 1100, 1550, 2350, 2450]).reshape(-1, 1)
+Y = np.array([245000, 312000, 279000, 308000, 199000, 219000, 405000, 324000])
+
+# Create a linear regression model
+model = LinearRegression()
+
+# Fit the model
+model.fit(X, Y)
+
+# Coefficients
+theta_0 = model.intercept_
+theta_1 = model.coef_[0]
+
+print(f"Intercept (theta_0): {theta_0}")
+print(f"Slope (theta_1): {theta_1}")
+
+# Predict the price of a house with size 2000 sq ft
+size = 2000
+predicted_price = model.predict([[size]])
+print(f"Predicted price for a house with size {size} sq ft: ${predicted_price[0]:,.2f}")
+
+
+Explanation
+Model Fitting: model.fit(X, Y) trains the linear regression model using the provided data.
+Coefficients: model.intercept_ and model.coef_[0] give us  θ0and θ1, the parameters of our model.
+Prediction: model.predict([[size]]) predicts the price of a house given its size.
+Result
+After running the code:
+
+You'll get the intercept (θ0 ) and slope (θ1) of the fitted line.
+You can use these values to predict the price of a house based on its size, such as predicting the price for a 2000 sq ft house.
+
+
+
+
+
+​
+
+ 
+​
+
+​
+
+
+What is Unsupervised learning?
+Unsupervised learning is a type of machine learning that learns from unlabeled data. This means that the data does not have any pre-existing labels or categories. The goal of unsupervised learning is to discover patterns and relationships in the data without any explicit guidance.
+
+Key Points
+
+Unsupervised learning allows the model to discover patterns and relationships in unlabeled data.
+Clustering algorithms group similar data points together based on their inherent characteristics.
+Feature extraction captures essential information from the data, enabling the model to make meaningful distinctions.
+Label association assigns categories to the clusters based on the extracted patterns and characteristics.
+Example
+Imagine you have a machine learning model trained on a large dataset of unlabeled images, containing both dogs and cats. The model has never seen an image of a dog or cat before, and it has no pre-existing labels or categories for these animals. Your task is to use unsupervised learning to identify the dogs and cats in a new, unseen image.
+
+
+Types of Unsupervised Learning
+Unsupervised learning is classified into two categories of algorithms: 
+
+Clustering: A clustering problem is where you want to discover the inherent groupings in the data, such as grouping customers by purchasing behavior.
+Association: An association rule learning problem is where you want to discover rules that describe large portions of your data, such as people that buy X also tend to buy Y.
+
+
+Clustering is a type of unsupervised learning that is used to group similar data points together.
+Exclusive (partitioning)
+Agglomerative
+Overlapping
+Probabilistic
+
+
+Clustering Types:-
+Hierarchical clustering
+K-means clustering
+Principal Component Analysis
+Singular Value Decomposition
+Independent Component Analysis
+Gaussian Mixture Models (GMMs)
+Density-Based Spatial Clustering of Applications with Noise (DBSCAN)
+
+Advantages of Unsupervised learning:-
+ It does not require training data to be labeled.
+Dimensionality reduction can be easily accomplished using unsupervised learning. 
+Capable of finding previously unknown patterns in data.
+Unsupervised learning can help you gain insights from unlabeled data that you might not have been able to get otherwise.
+Unsupervised learning is good at finding patterns and relationships in data without being told what to look for. This can help you learn new things about your data.
+
+Disadvantages of Unsupervised learning:-
+Difficult to measure accuracy or effectiveness due to lack of predefined answers during training. 
+The results often have lesser accuracy.
+The user needs to spend time interpreting and label the classes which follow that classification.
+Unsupervised learning can be sensitive to data quality, including missing values, outliers, and noisy data.
+Without labeled data, it can be difficult to evaluate the performance of unsupervised learning models, making it challenging to assess their effectiveness.
+
+Equation:
+In unsupervised learning, equations are not as common as in supervised learning because there's no explicit mapping between inputs and outputs. Instead, algorithms are used to find patterns or structures within the data.
+
+Problem:
+Let's consider an example problem of clustering customer data based on their purchasing behaviour. We have a dataset containing information about customers' purchases, such as the types of products they buy, the frequency of purchases, and the amount spent.
+Solution:
+We'll use a clustering algorithm, such as K-means clustering, to group customers with similar purchasing behavior together. The algorithm will partition the data into clusters such that each data point belongs to the cluster with the nearest mean, serving as the prototype of the cluster.
+After clustering, we can analyze the characteristics of each cluster to gain insights into different customer segments. For example, one cluster might consist of customers who purchase mostly electronics, while another cluster might consist of customers who purchase mostly groceries.
+This unsupervised learning approach allows us to discover patterns and structures within the data without the need for labeled responses. It can help businesses better understand their customers and tailor their marketing strategies accordingly.
+
+
+
+
+

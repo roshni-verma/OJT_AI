@@ -1,0 +1,36 @@
+pandas 5 key features:
+pandas is open sources liabrary.
+data structure with function.
+1.data structure
+a.series-> the data which is stored inside an array can be say as series.
+array=[1,2,3,4,5]
+
+b.dataframe->two dimentional
+row:there will be a unique id
+coloumn: there will be a label
+from eg:excel
+
+2.Data handling capabilities:
+
+a.cleanng
+b.transform
+c.aggreggation and grouping
+
+3. input/output
+
+files: we can import files like excel csv etc..
+
+4.time range functionality.
+5. integration with other liabraies.
+
+
+Convert the file into a dataframe
+ 
+create filter based on the country
+
+find the median mean std for the respective column and store into a new column
+
+delete the the repeated entries
+
+change the null values into 0
+archive (5).zip
