@@ -1,0 +1,22 @@
+class Vehicle:
+    def __init__(self, seating_capacity):
+        self.seating_capacity = seating_capacity
+
+    def fare(self):
+        return self.seating_capacity * 100
+
+
+class Bus(Vehicle):
+    def fare(self):
+        total_fare = super().fare()  # Calculate the base fare using the parent class method
+        maintenance_charge = total_fare * 0.10  # Calculate the maintenance charge
+        final_amount = total_fare + maintenance_charge  # Add the maintenance charge to the total fare
+        return final_amount
+
+
+# Example usage:
+vehicle = Vehicle(50)
+print(f"Vehicle Fare: {vehicle.fare()}")
+
+bus = Bus(50)
+print(f"Bus Fare: {bus.fare()}")
