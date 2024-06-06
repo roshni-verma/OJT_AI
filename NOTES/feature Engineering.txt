@@ -1,0 +1,178 @@
+What are features in machine learning? A feature is a measurable property of some data-sample that is used as input for a ML model for training and serving. A feature should have predictive power for the model it is being used in.
+
+Feature engineering is the process of selecting, manipulating and transforming raw data into features that can be used in supervised learning. It consists of five processes: feature creation, transformations, feature extraction, exploratory data analysis and benchmarking.
+
+What is feature engineering?
+Feature engineering is the process of transforming selected features in a dataset to create certain patterns, provide insight, and improve understanding of the data. This will eventually improve the accuracy of the model when trained with the data.
+
+Importance of feature engineering
+Feature engineering is important in traditional machine learning concepts. The following are the importance of feature engineering:
+
+1. Enhanced model performance with well-engineered features: When feature engineering techniques are carried out on features in a dataset, machine learning models are provided with reliable data that enables them to provide better accuracy and results.
+
+2. Improved data representation and pattern extraction: Properly engineered or transformed features provide reliable and detailed insights into data. This also aids data scientists or analysts in drawing out valuable conclusions from it.
+
+3. Dimensionality reduction and prevention of overfitting: Dimensionality reduction involves removing or filtering unuseful or irrelevant features which in turn will yield better model performance, especially in high dimension data. Dimensionality reduction reduces the chance of model overfitting.
+
+4. Handling missing data effectively: Feature engineering involves methods in which missing data are handled without harming model performance.
+
+5. Incorporating domain knowledge into the model: Applying feature engineering techniques allows us to include domain knowledge by selecting useful features and removing irrelevant features in the dataset before training in the machine learning model.
+
+
+Feature Engineering Techniques For Machine Learning -How to do Feature Engineering?
+
+1. Imputation
+Imputation deals with handling missing values in data. While deleting records missing specific values is one way of dealing with this issue, it could also mean losing out on valuable data. This is where imputation can help. It can be classified into two types-
+
+Categorical Imputation: Missing categorical variables are generally replaced by the most commonly occurring value in other records
+
+Numerical Imputation: Missing numerical values are generally replaced by the mean of the corresponding value in other records.
+
+2. Discretization
+Discretization involves taking a set of data values and grouping sets of them together logically into bins (or buckets). Binning can apply to numerical values as well as to categorical data values. This could help prevent data from overfitting but comes at the cost of loss of granularity of data. The grouping of data can be done as follows:
+
+Grouping of equal intervals
+
+Grouping based on equal frequencies (of observations in the bin)
+
+Grouping based on decision tree sorting (to establish a relationship with target).
+
+3. Categorical Encoding
+Categorical encoding is the technique used to encode categorical features into numerical values, which are usually simpler for an algorithm to understand. One hot encoding(OHE)  is a popularly used technique of categorical encoding. Here, categorical values are converted into simple numerical 1’s and 0’s without losing information. As with other techniques, OHE has disadvantages and must be used sparingly. It could dramatically increase the number of features and result in highly correlated features.
+
+4. Feature Splitting
+Splitting features into parts can sometimes improve the value of the features toward the target to be learned. For instance, in this case, Date better contributes to the target function than Date and Time.
+
+
+5. Handling Outliers
+Outliers are unusually high or low values in the dataset, which are unlikely to occur in normal scenarios. Since these outliers could adversely affect your prediction, they must be handled appropriately. The various methods of handling outliers include:
+
+Removal: The records containing outliers are removed from the distribution. However, the presence of outliers over multiple variables could result in losing out on a large portion of the datasheet with this method.
+
+Replacing values: The outliers could alternatively bed treated as missing values and replaced by using appropriate imputation.
+
+Capping: Capping the maximum and minimum values and replacing them with an arbitrary value or a value from a variable distribution.
+
+6. Variable Transformations
+Variable transformation techniques help with normalizing skewed data. One such popularly used transformation is the logarithmic transformation. Logarithmic transformations operate to compress the larger numbers and relatively expand the smaller numbers. This, in turn, results in less skewed values, especially in the case of heavy-tailed distributions. Other variable transformations used include Square root and Box-Cox transformations, which generalize the former two.
+
+7. Scaling 
+Feature scaling is done owing to the sensitivity of some machine learning algorithms to the scale of the input values. This technique of feature scaling is sometimes referred to as feature normalization. The commonly used scaling processes include:
+
+Min-Max Scaling- This process involves rescaling all values in a feature from 0 to 1. In other words, the minimum value in the original range will take 0, the maximum value will take 1, and the rest of the values between the two extremes will be appropriately scaled.
+
+Standardization/Variance Scaling- All the data points are subtracted by their mean, and the result is divided by the distribution's variance to arrive at a distribution with a 0 mean and variance of 1.
+
+It is necessary to be cautious when scaling sparse data using the above two techniques as it could result in additional computational load.
+
+8. Feature Creation in Machine Learning
+Feature creation involves deriving new features from existing ones. This can be done by simple mathematical operations such as aggregations to obtain the mean, median, mode, sum, or difference and even product of two values. Although derived directly from the given input data, these features can impact the performance when carefully chosen to relate to the target (as demonstrated later!)
+
+While the techniques for feature creation in machine learning listed above are by no means a comprehensive list of techniques, they are popularly used and should help you get started with feature engineering in machine learning.
+
+1. What are some common techniques used in feature engineering?
+Some common techniques used in feature engineering include one-hot encoding, feature scaling, handling missing values (e.g., imputation), creating interaction features (e.g., polynomial features), dimensionality reduction (e.g., PCA), feature selection (e.g., using statistical tests or feature importance), and transforming variables (e.g., logarithmic or power transformations).
+
+2. How can feature engineering help improve the performance of machine learning models?
+Feature engineering can improve the performance of machine learning models by creating relevant and informative features from raw data. By engineering features, ML models can make more accurate predictions, handle complex and distributed data, reduce overfitting, and extract valuable insights from categorical and numerical data.
+
+3. How do I determine which features are relevant or useful for my specific machine-learning problem?
+Using various techniques, you can determine relevant and useful features for a specific machine-learning problem. You can start by conducting exploratory data analysis, using domain knowledge, and leveraging statistical measures such as correlation and mutual information. You can also use feature importance methods like decision trees or regularization techniques to assess the impact of features on the model's performance. You can use feature selection algorithms, like recursive feature elimination, to identify the most relevant features based on their contribution to the model's accuracy.
+
+4. How do I handle missing data or outliers when performing feature engineering?
+When handling missing data during feature engineering, you can remove instances with missing values, fill in missing values with mean/median/mode, or use more advanced techniques like imputation methods (e.g., K-nearest neighbors or regression imputation). For outliers, you can consider removing them if they are shown to be incorrect or transform them using techniques like winsorization or capping
+
+What are the Steps in Feature Engineering?
+The steps for feature engineering vary per different Ml engineers and data scientists. Some of the common steps that are involved in most machine-learning algorithms are:
+
+Data Cleansing
+Data cleansing (also known as data cleaning or data scrubbing) involves identifying and removing or correcting any errors or inconsistencies in the dataset. This step is important to ensure that the data is accurate and reliable.
+Data Transformation
+Feature Extraction
+Feature Selection
+Feature selection involves selecting the most relevant features from the dataset for use in machine learning. This can include techniques like correlation analysis, mutual information, and stepwise regression.
+Feature Iteration
+Feature iteration involves refining and improving the features based on the performance of the machine learning model. This can include techniques like adding new features, removing redundant features and transforming features in different ways.
+
+
+Feature engineering in Machine learning consists of mainly 5 processes: Feature Creation, Feature Transformation, Feature Extraction, Feature Selection, and Feature Scaling
+1. Feature Creation
+Feature Creation is the process of generating new features based on domain knowledge or by observing patterns in the data. It is a form of feature engineering that can significantly improve the performance of a machine-learning model.
+
+Types of Feature Creation:
+Domain-Specific: Creating new features based on domain knowledge, such as creating features based on business rules or industry standards.
+Data-Driven: Creating new features by observing patterns in the data, such as calculating aggregations or creating interaction features.
+Synthetic: Generating new features by combining existing features or synthesizing new data points.
+Why Feature Creation?
+Improves Model Performance: By providing additional and more relevant information to the model, feature creation can increase the accuracy and precision of the model.
+Increases Model Robustness: By adding additional features, the model can become more robust to outliers and other anomalies.
+Improves Model Interpretability: By creating new features, it can be easier to understand the model’s predictions.
+Increases Model Flexibility: By adding new features, the model can be made more flexible to handle different types of data.
+
+Why Feature Creation?
+Improves Model Performance: By providing additional and more relevant information to the model, feature creation can increase the accuracy and precision of the model.
+Increases Model Robustness: By adding additional features, the model can become more robust to outliers and other anomalies.
+Improves Model Interpretability: By creating new features, it can be easier to understand the model’s predictions.
+Increases Model Flexibility: By adding new features, the model can be made more flexible to handle different types of data.
+
+2. Feature Transformation
+Feature Transformation is the process of transforming the features into a more suitable representation for the machine learning model. This is done to ensure that the model can effectively learn from the data.
+
+Types of Feature Transformation:
+Normalization: Rescaling the features to have a similar range, such as between 0 and 1, to prevent some features from dominating others.
+Scaling: Scaling is a technique used to transform numerical variables to have a similar scale, so that they can be compared more easily. Rescaling the features to have a similar scale, such as having a standard deviation of 1, to make sure the model considers all features equally.
+Encoding: Transforming categorical features into a numerical representation. Examples are one-hot encoding and label encoding.
+Transformation: Transforming the features using mathematical operations to change the distribution or scale of the features. Examples are logarithmic, square root, and reciprocal transformations.
+Why Feature Transformation?
+Improves Model Performance: By transforming the features into a more suitable representation, the model can learn more meaningful patterns in the data.
+Increases Model Robustness: Transforming the features can make the model more robust to outliers and other anomalies.
+Improves Computational Efficiency: The transformed features often require fewer computational resources.
+Improves Model Interpretability: By transforming the features, it can be easier to understand the model’s predictions.
+3. Feature Extraction
+Feature Extraction is the process of creating new features from existing ones to provide more relevant information to the machine learning model. This is done by transforming, combining, or aggregating existing features.
+
+Types of Feature Extraction:
+Dimensionality Reduction: Reducing the number of features by transforming the data into a lower-dimensional space while retaining important information. Examples are PCA and t-SNE.
+Feature Combination: Combining two or more existing features to create a new one. For example, the interaction between two features.
+Feature Aggregation: Aggregating features to create a new one. For example, calculating the mean, sum, or count of a set of features.
+Feature Transformation: Transforming existing features into a new representation. For example, log transformation of a feature with a skewed distribution.
+Why Feature Extraction?
+Improves Model Performance: By creating new and more relevant features, the model can learn more meaningful patterns in the data.
+Reduces Overfitting: By reducing the dimensionality of the data, the model is less likely to overfit the training data.
+Improves Computational Efficiency: The transformed features often require fewer computational resources.
+Improves Model Interpretability: By creating new features, it can be easier to understand the model’s predictions.
+4. Feature Selection
+Feature Selection is the process of selecting a subset of relevant features from the dataset to be used in a machine-learning model. It is an important step in the feature engineering process as it can have a significant impact on the model’s performance.
+
+Types of Feature Selection:
+Filter Method: Based on the statistical measure of the relationship between the feature and the target variable. Features with a high correlation are selected.
+Wrapper Method: Based on the evaluation of the feature subset using a specific machine learning algorithm. The feature subset that results in the best performance is selected.
+Embedded Method: Based on the feature selection as part of the training process of the machine learning algorithm.
+Why Feature Selection?
+Reduces Overfitting: By using only the most relevant features, the model can generalize better to new data.
+Improves Model Performance: Selecting the right features can improve the accuracy, precision, and recall of the model.
+Decreases Computational Costs: A smaller number of features requires less computation and storage resources.
+Improves Interpretability: By reducing the number of features, it is easier to understand and interpret the results of the model.
+5. Feature Scaling 
+Feature Scaling is the process of transforming the features so that they have a similar scale. This is important in machine learning because the scale of the features can affect the performance of the model.
+
+Types of Feature Scaling:
+Min-Max Scaling: Rescaling the features to a specific range, such as between 0 and 1, by subtracting the minimum value and dividing by the range.
+Standard Scaling: Rescaling the features to have a mean of 0 and a standard deviation of 1 by subtracting the mean and dividing by the standard deviation.
+Robust Scaling: Rescaling the features to be robust to outliers by dividing them by the interquartile range.
+Why Feature Scaling?
+Improves Model Performance: By transforming the features to have a similar scale, the model can learn from all features equally and avoid being dominated by a few large features.
+Increases Model Robustness: By transforming the features to be robust to outliers, the model can become more robust to anomalies.
+Improves Computational Efficiency: Many machine learning algorithms, such as k-nearest neighbors, are sensitive to the scale of the features and perform better with scaled features.
+Improves Model Interpretability: By transforming the features to have a similar scale, it can be easier to understand the model’s predictions.
+What are the Steps in Feature Engineering?
+The steps for feature engineering vary per different Ml engineers and data scientists. Some of the common steps that are involved in most machine-learning algorithms are:
+
+Data Cleansing
+Data cleansing (also known as data cleaning or data scrubbing) involves identifying and removing or correcting any errors or inconsistencies in the dataset. This step is important to ensure that the data is accurate and reliable.
+Data Transformation
+Feature Extraction
+Feature Selection
+Feature selection involves selecting the most relevant features from the dataset for use in machine learning. This can include techniques like correlation analysis, mutual information, and stepwise regression.
+Feature Iteration
+Feature iteration involves refining and improving the features based on the performance of the machine learning model. This can include techniques like adding new features, removing redundant features and transforming features in different ways.
