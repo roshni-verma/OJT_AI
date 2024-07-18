@@ -1,0 +1,106 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9                                              \fs28\par
+                                                 Build a CNN model for CIFAR10 dataset\par
+\fs22\par
+\par
+STEP1- IMPORT LIABRARIES\par
+Load CIFAR-10 dataset: Load the CIFAR-10 dataset, which contains 60,000 32x32 color images in 10 different classes.\par
+Keras is the high-level API of the TensorFlow platform. It provides an approachable, highly-productive interface for solving machine learning (ML) problems, with a focus on modern deep learning. Keras covers every step of the machine learning workflow, from data processing to hyperparameter tuning to deployment. It was developed with a focus on enabling fast experimentation.\par
+With Keras, you have full access to the scalability and cross-platform capabilities of TensorFlow.\par
+1.from tensorflow.keras import Sequential\par
+from tensorflow.keras.datasets import cifar10\par
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense\par
+from tensorflow.keras.losses import SparseCategoricalCrossentropy\par
+import matplotlib.pyplot as plt\par
+\par
+STEP2-Normalize pixel values: Normalize pixel values to be between 0 and 1.\par
+This code uses the Python programming language and is using the load_data() function from the cf10 module to load the CIFAR10 dataset.\par
+\f1\bullet  The function returns two tuples, one containing the training images and labels, and the other containing the test images and labels.\par
+\bullet  The code is using tuple unpacking to assign these values to the variables train_images, train_labels, test_images, and test_labels.\par
+\bullet  This code is commonly used in machine learning and computer vision projects to load and preprocess image data for training and testing models.\f0\par
+# Load CIFAR-10 dataset\par
+(X_train, y_train), (X_test, y_test) = cifar10.load_data()\par
+\par
+\par
+3. Define the CNN model: Define a convolutional neural network model using Sequential. The model consists of three convolutional layers with ReLU activation, followed by max pooling layers. Then, it flattens the output and adds two fully connected layers.\par
+This code imports necessary modules from the TensorFlow Keras library, including Sequential, Conv2D, MaxPooling2D, Flatten, and Dense.\par
+\f1\bullet  It then defines several variables that will be used in the model architecture implementation.\par
+\bullet  The model architecture implementation starts by creating a Sequential model.\par
+\bullet  The first layer added to the model is a Conv2D layer with FILTER1_SIZE filters of size FILTER_SHAPE and an activation function of 'relu'.\par
+\bullet  The input shape for this layer is specified as INPUT_SHAPE.\par
+\bullet  The next layer added is a MaxPooling2D layer with a pool size of POOL_SHAPE.\par
+\bullet  The same process is repeated for a second Conv2D layer with FILTER2_SIZE filters and a second MaxPooling2D layer.\par
+\bullet  After the convolutional and pooling layers, a Flatten layer is added to convert the output of the previous layers into a 1D array.\par
+\bullet  This is followed by two Dense layers, the first with FULLY_CONNECT_NUM neurons and an activation function of 'relu', and the second with NUM_CLASSES neurons \f0\lang1033 .\f1\lang9\par
+\bullet  The final layer outputs a probability distribution over the possible classes.\par
+\bullet  Overall, this code defines a convolutional neural network (CNN) model for image classification.\par
+\par
+As input, a CNN takes tensors of shape (image_height, image_width, color_channels), ignoring the batch size. If you are new to these dimensions, color_channels refers to (R,G,B). In this example, you will configure your CNN to process inputs of shape (32, 32, 3), which is the format of CIFAR images. You can do this by passing the argument input_shape to your first layer.\par
+Above, you can see that the output of every Conv2D and MaxPooling2D layer is a 3D tensor of shape (height, width, channels). The width and height dimensions tend to shrink as you go deeper in the network. The number of output channels for each Conv2D layer is controlled by the first argument (e.g., 32 or 64). Typically, as the width and height shrink, you can afford (computationally) to add more output channels in each Conv2D layer.\par
+To complete the model, you will feed the last output tensor from the convolutional base (of shape (4, 4, 64)) into one or more Dense layers to perform classification. Dense layers take vectors as input (which are 1D), while the current output is a 3D tensor. First, you will flatten (or unroll) the 3D output to 1D, then add one or more Dense layers on top. CIFAR has 10 output classes, so you use a final Dense layer with 10 outputs.\par
+\par
+\par
+\f0\par
+# Define the CNN model\par
+model = Sequential()\par
+model.add(Conv2D(32, (3, 3), activation='relu', input_shape=(32, 32, 3)))\par
+model.add(MaxPooling2D((2, 2)))\par
+model.add(Conv2D(64, (3, 3), activation='relu'))\par
+model.add(MaxPooling2D((2, 2)))\par
+model.add(Conv2D(64, (3, 3), activation='relu'))\par
+model.add(Flatten())\par
+model.add(Dense(64, activation='relu'))\par
+model.add(Dense(10))\par
+# See the model summary\par
+model.summary()\par
+\par
+\par
+4. Compile the model: Compile the model using the Adam optimizer and sparse categorical crossentropy loss function.\par
+The Loss Function takes the predicted output and the actual output as inputs and computes a numerical value that represents the error. The goal of a machine learning algorithm is to minimize this error by adjusting the model's parameters through an optimization process known as training. The optimization process iteratively updates the model's parameters to find the values that minimize the Loss Function. By minimizing the Loss Function, the model improves its ability to make accurate predictions.\par
+# Compile the model\par
+model.compile(optimizer='adam',\par
+              loss=SparseCategoricalCrossentropy(from_logits=True),\par
+              metrics=['accuracy'])\par
+\par
+5. Train the model: Train the model on the training data for 10 epochs.\par
+Epochs make it simple to track your model's progress during training. Monitoring your model's performance on the training and validation sets over multiple epochs will give you an idea of whether the model is improving and when it may begin to overfit.\par
+# Train the model\par
+history = model.fit(X_train, y_train, epochs=10, validation_data=(X_test, y_test))\par
+\par
+\par
+6. Evaluate the model: Evaluate the model on the test data and print the test accuracy.\par
+\par
+Performance evaluation is the quantitative measure of how well a trained model performs on specific model evaluation metrics in machine learning. This information can then be used to determine if a model is ready to move onto the next stage of testing, be deployed more broadly, or is in need of more training or retraining.\par
+\par
+# Evaluate the model\par
+test_loss, test_acc = model.evaluate(X_test, y_test, verbose=2)\par
+print("Test Accuracy:", test_acc)\par
+\par
+\par
+7. Plot accuracy and loss curves: Plot the training and validation accuracy and loss curves to visualize the model's performance during training.\par
+\par
+I currently have a code where i am training one model with 3 classes. I was asked to show "the accuracy plot and loss plot for each class (totally 6 images)." Is it possible for me to even do this? I currently only have one graph and this is my code for it:\par
+\par
+# Plot accuracy and loss curves as subplots\par
+plt.figure(figsize=(10, 3))\par
+# Accuracy subplot\par
+plt.subplot(1, 2, 1)\par
+plt.plot(history.history['accuracy'], label='training_accuracy')\par
+plt.plot(history.history['val_accuracy'], label='validation_accuracy')\par
+plt.xlabel('Epoch')\par
+plt.ylabel('Accuracy')\par
+plt.ylim([0, 1])\par
+plt.legend(loc='lower right')\par
+plt.title('Accuracy')\par
+# Loss subplot\par
+plt.subplot(1, 2, 2)\par
+plt.plot(history.history['loss'], label='training_loss')\par
+plt.plot(history.history['val_loss'], label='validation_loss')\par
+plt.xlabel('Epoch')\par
+plt.ylabel('Loss')\par
+plt.legend(loc='upper right')\par
+plt.title('Loss')\par
+plt.show()\par
+}
+ 
