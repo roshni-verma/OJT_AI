@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Form</title>
+    <style>
+        /* Your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input, select {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .message {
+            text-align: center;
+            color: green;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Prediction Form</h2>
+        <form method="POST" action="{{ url_for('prediction') }}">
+            {{ form.hidden_tag() }}
+            
+            <label for="area">{{ form.area.label }}</label>
+            {{ form.area() }}
+            
+            <label for="monsoon_intensity">{{ form.monsoon_intensity.label }}</label>
+            {{ form.monsoon_intensity() }}
+            
+            <label for="deforestation">{{ form.deforestation.label }}</label>
+            {{ form.deforestation() }}
+            
+            <label for="climate_change">{{ form.climate_change.label }}</label>
+            {{ form.climate_change() }}
+            
+            <label for="siltation">{{ form.siltation.label }}</label>
+            {{ form.siltation() }}
+            
+            <label for="agricultural_practices">{{ form.agricultural_practices.label }}</label>
+            {{ form.agricultural_practices() }}
+            
+            <label for="drainage_systems">{{ form.drainage_systems.label }}</label>
+            {{ form.drainage_systems() }}
+            
+            <label for="coastal_vulnerability">{{ form.coastal_vulnerability.label }}</label>
+            {{ form.coastal_vulnerability() }}
+            
+            <label for="landslides">{{ form.landslides.label }}</label>
+            {{ form.landslides() }}
+            
+            <label for="population_score">{{ form.population_score.label }}</label>
+            {{ form.population_score() }}
+            
+            <label for="inadequate_planning">{{ form.inadequate_planning.label }}</label>
+            {{ form.inadequate_planning() }}
+            
+            <input type="submit" value="Predict">
+        </form>
+        
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="message">
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>
