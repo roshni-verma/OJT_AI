@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecaster</title>
+    <style>
+        /* Your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input, select {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[readonly], select[readonly] {
+            background-color: #f9f9f9;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .message {
+            text-align: center;
+            color: green;
+            margin-top: 20px;
+        }
+    </style>
+    <script type="text/javascript">
+        function updateLatLon() {
+            var selectedArea = document.getElementById('area').value;
+
+            fetch('/get_latlon', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'area=' + encodeURIComponent(selectedArea),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    alert(data.error);
+                } else {
+                    document.getElementById('latitude').value = data.latitude.toFixed(6);
+                    document.getElementById('longitude').value = data.longitude.toFixed(6);
+                }
+            });
+        }
+
+        function showConfirmationPopup() {
+            var name = document.getElementById('name').value;
+            var city = document.getElementById('city').value;
+            var area = document.getElementById('area').value;
+            var latitude = document.getElementById('latitude').value;
+            var longitude = document.getElementById('longitude').value;
+
+            var message = "Thank you, " + name + "!\n\n" +
+                          "Here is the information you submitted:\n" +
+                          "City: " + city + "\n" +
+                          "Area: " + area + "\n" +
+                          "Latitude: " + latitude + "\n" +
+                          "Longitude: " + longitude;
+
+            alert(message);
+            return true; // Allow form submission after showing the confirmation popup
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Weather Forecaster</h2>
+        <form method="POST" action="{{ url_for('weather_forecaster') }}" onsubmit="return showConfirmationPopup();">
+            {{ form.hidden_tag() }}
+            
+            <label for="name">{{ form.name.label }}</label>
+            {{ form.name(id="name") }}
+            
+            <label for="city">{{ form.city.label }}</label>
+            {{ form.city(id="city") }}
+            
+            <label for="area">{{ form.area.label }}</label>
+            {{ form.area(onchange="updateLatLon()", id="area") }}
+            
+            <label for="latitude">{{ form.latitude.label }}</label>
+            {{ form.latitude(id="latitude", readonly=True) }}
+            
+            <label for="longitude">{{ form.longitude.label }}</label>
+            {{ form.longitude(id="longitude", readonly=True) }}
+            
+            <input type="submit" value="Submit">
+        </form>
+        
+        <a href="{{ url_for('predict') }}">Go to Prediction Form</a>
+        
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="message">
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>
+
